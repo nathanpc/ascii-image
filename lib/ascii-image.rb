@@ -65,7 +65,5 @@ class ASCII_Image
                 print "\n"
             end
         end
-        
-        print "\n"
     end
 end
