@@ -24,13 +24,13 @@ class ASCII_Image
         
         # Get the pixel array
         image.each_pixel do |pixel, col, row|
-            #puts "Pixel at #{col}x#{row}: R: #{pixel.red} - G: #{pixel.green} - B: #{pixel.blue}\n"
+            puts "Pixel at #{col}x#{row}: R: #{pixel.red} - G: #{pixel.green} - B: #{pixel.blue}\n"
             
-            print " ".background(pixel.red, pixel.green, pixel.blue)
+            #print " ".background(pixel.red, pixel.green, pixel.blue)
             
-            if (col % (width - 1) == 0) and (col != 0)
-                print "\n"
-            end
+            #if (row % width == 0) and (row != 0)
+            #    print "\n"
+            #end
         end
         
         puts " "
