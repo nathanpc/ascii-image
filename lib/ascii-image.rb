@@ -4,7 +4,30 @@ require 'rubygems'
 require 'RMagick'
 require 'rainbow'
 
+# == Summary
+# 
+# This handy Ruby gem will help you to create awesome ASCII art from images
+# for your awesome command-line projects.
+# 
+# == Example
+# 
+#   ascii = ASCII_Image.new("file.jpg")
+#   ascii.build(80)
+# 
+# == Contact
+# 
+# Author:: Nathan Campos (nathanpc@dreamintech.net)
+# Website:: http://about.me/nathanpc
+
 class ASCII_Image
+    # Initialize the ASCII_Image class.
+    # 
+    # An Error is raised if your ImageMagick quantum depth is higher than 8.
+    # 
+    # Arguments:
+    #   file: (String)
+    #   console_width: (Integer)
+    
     def initialize(file, console_width = 80)
         @file = file
         @console_width = console_width
@@ -13,6 +36,13 @@ class ASCII_Image
             raise "Your ImageMagick quantum depth is set to #{Magick::QuantumDepth}. You need to have it set to 8 in order for this app to work."
         end
     end
+    
+    # Convert the image into ASCII and print it to the console.
+    # 
+    # An ArgumentError is raised if the +width+ is bigger than the +console_width+
+    # 
+    # Arguments:
+    #   width: (Integer)
     
     def build(width)
         # Open the image file
