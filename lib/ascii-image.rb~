@@ -39,3 +39,6 @@ class ASCII_Image
         print "\n"
     end
 end
+
+ascii = ASCII_Image.new("poster.jpg")
+ascii.build(80)
