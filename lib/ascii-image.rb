@@ -3,6 +3,7 @@
 require 'rubygems'
 require 'RMagick'
 require 'rainbow'
+require 'open-uri'
 
 # == Summary
 # 
@@ -25,11 +26,11 @@ class ASCII_Image
     # An Error is raised if your ImageMagick quantum depth is higher than 8.
     # 
     # Arguments:
-    #   file: (String)
+    #   uri: (String)
     #   console_width: (Integer)
     
-    def initialize(file, console_width = 80)
-        @file = file
+    def initialize(uri, console_width = 80)
+        @uri = uri
         @console_width = console_width
         
         if Magick::QuantumDepth > 8
@@ -45,8 +46,10 @@ class ASCII_Image
     #   width: (Integer)
     
     def build(width)
-        # Open the image file
-        image = Magick::Image.read(@file)[0]
+        # Open the resource
+        resource = open(@uri)
+        image = Magick::ImageList.new
+        image.from_blob resource.read
         
         # Resize to the desired "text-pixel" size
         if width > @console_width
