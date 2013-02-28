@@ -8,9 +8,13 @@ A Ruby gem to convert images into ASCII for your awesome command-line applicatio
 
 Convert an image to ASCII and print it using 20 columns of the console:
 
-    ascii = ASCII_Image.new("file.jpg")
+    ascii = ASCII_Image.new("~/my_image.jpg")
     ascii.build(20)
 
+or open the image from the web:
+
+    ascii = ASCII_Image.new("http://www.levihackwith.com/wp-content/uploads/2011/10/github-logo.png")
+    ascii.build(60)
 
 ## License
 
