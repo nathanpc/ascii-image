@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'rubygems'
-require 'RMagick'
+require 'rmagick'
 require 'rainbow'
 require 'open-uri'
 
@@ -33,8 +33,8 @@ class ASCII_Image
         @uri = uri
         @console_width = console_width
         
-        if Magick::QuantumDepth > 8
-            raise "Your ImageMagick quantum depth is set to #{Magick::QuantumDepth}. You need to have it set to 8 in order for this app to work."
+        if Magick::MAGICKCORE_QUANTUM_DEPTH > 8
+            raise "Your ImageMagick quantum depth is set to #{Magick::MAGICKCORE_QUANTUM_DEPTH}. You need to have it set to 8 in order for this app to work."
         end
     end
     
