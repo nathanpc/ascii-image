@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
     s.name        = "ascii-image"
     s.version     = "0.1.4"
-    s.license     = "GPL-3.0-or-later"
+    s.license     = "GPL-3.0"
     s.summary     = "Convert images into ASCII"
     s.description = "A Ruby gem to convert images into ASCII for your awesome command-line applications"
     s.authors     = ["Nathan Campos"]

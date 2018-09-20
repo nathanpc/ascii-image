@@ -1,8 +1,7 @@
 # ascii-image
 
-[![Gem Version](https://badge.fury.io/rb/ascii-image.svg)](https://badge.fury.io/rb/ascii-image)
-
-A Ruby gem to convert images into ASCII for your awesome command-line applications.
+[![Gem Version](https://badge.fury.io/rb/ascii-image.svg)](https://badge.fury.io/rb/ascii-image)  
+A Ruby gem to convert images into ASCII for your awesome command-line applications.  
 *This is my first Ruby gem*
 
 
