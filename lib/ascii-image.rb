@@ -62,7 +62,7 @@ class ASCII_Image
         
         # Get the pixel array
         image.each_pixel do |pixel, col, row|
-            print " ".background(pixel.red, pixel.green, pixel.blue)
+            print Rainbow(" ").background(pixel.red, pixel.green, pixel.blue)
             
             if (col % (width - 1) == 0) and (col != 0)
                 print "\n"
