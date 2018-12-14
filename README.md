@@ -4,6 +4,19 @@
 A Ruby gem to convert images into ASCII for your awesome command-line applications.  
 *This is my first Ruby gem*
 
+## Installation
+This gem relies on [RMagick](https://github.com/rmagick/rmagick), so you will need to ensure you install the [prerequisites](https://github.com/rmagick/rmagick#prerequisites) (ImageMagick).
+
+Install in your terminal with:
+```
+gem install ascii-image
+```
+
+Or in your Gemfile:
+
+```
+gem 'ascii-image'
+```
 
 ## Example
 
